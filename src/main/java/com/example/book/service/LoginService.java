@@ -34,6 +34,8 @@ public class LoginService {
                 return true;
             }
             //执行注册，保存账号密码，并返回true
+
+            // 为新注册的用户，新增普通用户角色
         }
         return false;
     }

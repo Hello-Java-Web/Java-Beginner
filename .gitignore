@@ -2,7 +2,7 @@
 *.class
 /target
 */test
-
+*.iml
 
 # Log file
 *.log
