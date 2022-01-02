@@ -1,6 +1,5 @@
 package com.example.book.controller;
 
-import com.example.book.User;
 import com.example.book.entity.BookEntity;
 import com.example.book.service.BookService;
 import com.example.book.service.RoleService;
@@ -117,10 +116,10 @@ public class BookController {
      * @return 借书列表
      */
     @RequestMapping("/getUserBookList")
-    @abc("admin,user")
+    //@abc("admin,user")
     public List<BookEntity> getUserBookList(String username, String password) {
 
-     //   User user = UserUtils.getLoginUser();
+        //   User user = UserUtils.getLoginUser();
 
         if (roleService.hasRole(Long.parseLong(username), 注册用户)) {
             return bookService.userBookList(username, password);
@@ -136,7 +135,7 @@ public class BookController {
      * @return Boolean
      */
     @RequestMapping("/offTheShelfBook")
-    @abc("user")
+    //@abc("user")
     public String offTheShelfBook(String bookId, String username, String password) {
         boolean ok = bookService.offBook(bookId, username, password);
         if (ok) {
