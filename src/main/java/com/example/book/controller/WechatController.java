@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class WechatController {
 
 
+    /**
+     * 测试一下
+     *
+     * @return ok
+     */
     @RequestMapping("/login")
     public String wechatLogin() {
         System.err.println("测试一下");
