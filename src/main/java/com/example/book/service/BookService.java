@@ -19,7 +19,7 @@ public class BookService extends ServiceImpl<BookMapper, BookEntity> {
     private UserService userService;
 
     /**
-     * 图书添加服务
+     * 图书添加的服务
      *
      * @param bookEntity 图书实体
      * @return 返回添加图书是否成功
