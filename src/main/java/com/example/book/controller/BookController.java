@@ -30,6 +30,18 @@ public class BookController {
         return bookService.list();
     }
 
+    /**
+     * 根据查询字段返回对应的排序列表
+     *
+     * @param shortList 需要查询的字段排序信息
+     * @return 查询到的字段排序信息
+     */
+    @RequestMapping("sort_bookEntity_list")
+    public List<BookEntity> sortBookEntityList(String shortList) {
+
+        return bookService.sortBookEntityList(shortList);
+    }
+
 
     /**
      * 增加新图书

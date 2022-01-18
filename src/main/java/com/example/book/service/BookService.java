@@ -14,6 +14,8 @@ import java.util.Objects;
 
 @Service
 public class BookService extends ServiceImpl<BookMapper, BookEntity> {
+
+
     //  @Autowired
     @Resource
     private UserService userService;
@@ -61,6 +63,7 @@ public class BookService extends ServiceImpl<BookMapper, BookEntity> {
             return true;
         }
     }
+
 
     /**
      * 更改/更新图书属性内容服务
@@ -204,5 +207,11 @@ public class BookService extends ServiceImpl<BookMapper, BookEntity> {
             return true;
         }
         return false;
+    }
+
+
+    public List<BookEntity> sortBookEntityList(String shortList) {
+        String sql = "SELECT * FROM book,"
+        
     }
 }
