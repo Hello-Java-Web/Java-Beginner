@@ -8,7 +8,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 @TableName("user")
-//@Getter@Setter
 @Data
 public class UserEntity implements Serializable {
     //    @TableId(type = IdType)
