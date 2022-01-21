@@ -2,5 +2,6 @@ package com.example.book.entity;
 
 public class Result {
     private Long code;
-    private String mess
+    private String mess;
+    private Object obj;
 }
