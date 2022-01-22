@@ -39,7 +39,8 @@ public class BookController {
     @RequestMapping("sort_bookEntity_list")
     public List<BookEntity> sortBookEntityList(String shortList) {
 
-        return bookService.sortBookEntityList(shortList);
+//        return bookService.sortBookEntityList(shortList);
+        return null;
     }
 
 

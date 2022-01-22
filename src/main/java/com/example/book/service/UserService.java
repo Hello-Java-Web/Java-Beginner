@@ -31,6 +31,18 @@ public class UserService extends ServiceImpl<UserMapper, UserEntity> {
         }
         return "error";
     }
+
+    /**
+     * 根据name查返回一个用户实体
+     *
+     * @param userName
+     * @return
+     */
+    public UserEntity getUser(String userName) {
+        QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
+        wrapper.eq("username", userName);
+        return this.getOne(wrapper);
+    }
 }
 
 

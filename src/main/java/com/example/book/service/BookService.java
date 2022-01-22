@@ -209,9 +209,4 @@ public class BookService extends ServiceImpl<BookMapper, BookEntity> {
         return false;
     }
 
-
-    public List<BookEntity> sortBookEntityList(String shortList) {
-        String sql = "SELECT * FROM book,"
-        
-    }
 }
