@@ -13,8 +13,8 @@ public class Result {
     /**
      * 成功返回结果
      *
-     * @param message
-     * @return
+     * @param message 返回的消息
+     * @return 成功返回结果
      */
     public static Result success(String message) {
         return new Result(1L, message, null);
