@@ -2,7 +2,6 @@ package com.example.book.controller;
 
 import com.example.book.entity.BookEntity;
 import com.example.book.service.BookService;
-import com.example.book.service.RoleService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,8 +15,8 @@ public class BookController {
     //@Autowired
     @Resource
     private BookService bookService;
-    @Resource
-    private RoleService roleService;
+//    @Resource
+//    private RoleService roleService;
 
     /**
      * 图书列表
@@ -119,8 +118,8 @@ public class BookController {
         return "0";
     }
 
-    public static final Long 注册用户 = 1L;
-    public static final Long 系统管理员 = 2L;
+//    public static final Long 注册用户 = 1L;
+//    public static final Long 系统管理员 = 2L;
 
     /**
      * 根据用户名获取借书信息
@@ -131,14 +130,8 @@ public class BookController {
     @RequestMapping("/getUserBookList")
     //@abc("admin,user")
     public List<BookEntity> getUserBookList(String username, String password) {
-
         //   User user = UserUtils.getLoginUser();
-
-        if (roleService.hasRole(Long.parseLong(username), 注册用户)) {
-            return bookService.userBookList(username, password);
-        } else {
-            return null;
-        }
+        return bookService.userBookList(username, password);
     }
 
     /**
