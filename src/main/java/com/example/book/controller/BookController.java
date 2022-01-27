@@ -19,9 +19,9 @@ public class BookController {
 //    private RoleService roleService;
 
     /**
-     * 图书列表
+     * 查询图书列表
      *
-     * @return 图书列表
+     * @return 图书的列表
      */
     @RequestMapping("/bookList")
     public List<BookEntity> bookList() {
