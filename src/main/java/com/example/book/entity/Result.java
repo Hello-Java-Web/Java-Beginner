@@ -23,9 +23,9 @@ public class Result {
     /**
      * 成功返回结果与实体
      *
-     * @param message
-     * @param obj
-     * @return
+     * @param message 必要信息
+     * @param obj     返回对象
+     * @return 结果
      */
     public static Result success(String message, Object obj) {
         return new Result(1L, message, obj);
