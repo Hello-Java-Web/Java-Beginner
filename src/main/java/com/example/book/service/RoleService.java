@@ -23,7 +23,7 @@ public class RoleService extends ServiceImpl<RoleMapper, RoleEntity> {
     private RoleUserMapper roleUserMapper;
 
     /**
-     * 根据用户id返回是否包含某个角色
+     * 根据用户id返回是否包含某个实体的方法
      *
      * @param userId
      * @param roleId
