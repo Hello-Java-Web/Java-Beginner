@@ -46,7 +46,7 @@ public class LoginController {
 
 
     /**
-     * 登录入口
+     * 用户登录入口
      *
      * @param userEntity userEntity
      * @return 登录成功或者失败
