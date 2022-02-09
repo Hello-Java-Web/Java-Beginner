@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Map;
 
 // 控制器注解，负责跳转页面的
 //@Controller
@@ -45,20 +43,20 @@ public class LoginController {
     }
 
 
-    /**
-     * 用户登录入口
-     *
-     * @param userEntity userEntity
-     * @return 登录成功或者失败
-     */
-    @RequestMapping("/login") // 21点38分22秒，15秒，->sql
-    public Result login(UserEntity userEntity, HttpServletRequest request) {
-        Map<String, String[]> parameterMap = request.getParameterMap();
-        boolean ok = loginService.doLogin(userEntity);
-        if (ok) {
-            return Result.success("登陆成功", userEntity);
-        } else {
-            return Result.error("用户名或密码错误");
-        }
-    }
+//    /**
+//     * 用户登录入口
+//     *
+//     * @param userEntity userEntity
+//     * @return 登录成功或者失败
+//     */
+//    @RequestMapping("/login") // 21点38分22秒，15秒，->sql
+//    public Result login(UserEntity userEntity, HttpServletRequest request) {
+//        Map<String, String[]> parameterMap = request.getParameterMap();
+//        boolean ok = loginService.doLogin(userEntity);
+//        if (ok) {
+//            return Result.success("登陆成功", userEntity);
+//        } else {
+//            return Result.error("用户名或密码错误");
+//        }
+}
 }
